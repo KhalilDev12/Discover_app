@@ -3,13 +3,15 @@ class Article {
   final String image;
   final String location;
   final String author;
+  final String authorPicture;
   final int likes;
   final int comments;
   final int shares;
   bool isLiked = false;
+  final double rating;
 
   Article(this.title, this.image, this.comments, this.likes, this.isLiked,
-      this.location, this.shares, this.author);
+      this.location, this.shares, this.author, this.authorPicture, this.rating);
 }
 
 List<Article> articles = [
@@ -21,7 +23,9 @@ List<Article> articles = [
       true,
       'Osaka Japan',
       50,
-      'Hussain Mustafa'),
+      'Hussain Mustafa',
+      "https://i.pravatar.cc/150",
+      4.5),
   Article(
       'Known as the sleepless town for obvious reasons',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSECGh7qBKYuS7evPlNrZX_ymcuiTcDMYGs9DskMf-zhvauuUAKLg9lL0vKPjvSBxs_aiQ&usqp=CAU',
@@ -30,7 +34,9 @@ List<Article> articles = [
       true,
       'Kabuikicho Japan',
       1250,
-      'Tim Salvatore'),
+      'Tim Salvatore',
+      "https://i.pravatar.cc/250",
+      4),
   Article(
       'Japan\'s second largest metropolitan area',
       'https://www.travelandleisure.com/thmb/VscfMXHNO6uBpaX2cuIW1q2ZtA8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tokyo-japan-TOKYOTG0621-52012ff551dc46c4a87ac8e3151307a4.jpg',
@@ -39,5 +45,7 @@ List<Article> articles = [
       true,
       'Tokyo Japan',
       1000,
-      'Ely Marya'),
+      'Ely Marya',
+      "https://i.pravatar.cc/200",
+      5),
 ];

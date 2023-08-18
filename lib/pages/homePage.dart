@@ -1,4 +1,5 @@
 import 'package:discover_app/data/data.dart';
+import 'package:discover_app/widgets/articleWidget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    //print(_deviceHeight*0.05);
+    //print(_deviceHeight*0.07);
     //print(_deviceWidth*0.4);
     _deviceHeight = MediaQuery.of(context).size.height;
     _deviceWidth = MediaQuery.of(context).size.width;
@@ -143,26 +144,10 @@ class _HomePageState extends State<HomePage> {
       child: ListView.builder(
         itemCount: articles.length,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: EdgeInsets.only(bottom: _deviceHeight * 0.03),
-            child: Container(
-              width: _deviceWidth,
-              height: _deviceHeight * 0.35,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage(articles[index].image),
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.black38,
-                        spreadRadius: 2,
-                        blurRadius: 5,
-                        offset: Offset(0, 5))
-                  ]),
-            ),
-          );
+          return ArticleWidget(
+              article: articles[index],
+              deviceHeight: _deviceHeight,
+              deviceWidth: _deviceWidth);
         },
       ),
     );
