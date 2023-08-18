@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           const Icon(Icons.menu, color: Colors.black87),
           Container(
-            height: _deviceHeight * 0.05,
+            height: _deviceHeight * 0.045,
             width: _deviceWidth * 0.3,
             decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
   Widget _locationBarWidget() {
     return Container(
       width: _deviceWidth,
-      height: _deviceHeight * 0.08,
+      height: _deviceHeight * 0.07,
       padding: EdgeInsets.symmetric(
           vertical: _deviceHeight * 0.015, horizontal: _deviceWidth * 0.05),
       decoration: BoxDecoration(
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                     color: _activeLocation == index
                         ? Colors.white
                         : Colors.white24,
-                    fontSize: 15,
+                    fontSize: 16,
                     fontFamily: 'Montserrat',
                   ),
                 ),

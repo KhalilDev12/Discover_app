@@ -39,7 +39,7 @@ class _ArticleWidgetState extends State<ArticleWidget> {
         child: Stack(children: [
           Container(
               width: widget.deviceWidth,
-              height: widget.deviceHeight * 0.33,
+              height: widget.deviceHeight * 0.32,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   image: DecorationImage(
